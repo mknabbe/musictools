@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		054903031C5D193E00163FDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054903021C5D193E00163FDE /* AppDelegate.swift */; };
-		054903051C5D193E00163FDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054903041C5D193E00163FDE /* ViewController.swift */; };
+		054903051C5D193E00163FDE /* MetronomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054903041C5D193E00163FDE /* MetronomeViewController.swift */; };
 		054903081C5D193E00163FDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 054903061C5D193E00163FDE /* Main.storyboard */; };
 		0549030A1C5D193E00163FDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 054903091C5D193E00163FDE /* Assets.xcassets */; };
-		054903151C5D193E00163FDE /* musictoolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054903141C5D193E00163FDE /* musictoolsTests.swift */; };
 		054903201C5D193E00163FDE /* musictoolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0549031F1C5D193E00163FDE /* musictoolsUITests.swift */; };
+		0549032E1C5D195E00163FDE /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0549032D1C5D195E00163FDE /* Metronome.swift */; };
+		054903301C5D197C00163FDE /* MetronomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0549032F1C5D197C00163FDE /* MetronomTests.swift */; };
+		054903321C5D1B2000163FDE /* MetronomeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054903311C5D1B2000163FDE /* MetronomeActions.swift */; };
+		054903341C5E03B300163FDE /* sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 054903331C5E03B300163FDE /* sound.m4a */; };
+		054903371C5E049400163FDE /* BeatPlayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054903361C5E049400163FDE /* BeatPlayable.swift */; };
+		054903391C5E06CA00163FDE /* BeatPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054903381C5E06CA00163FDE /* BeatPlayer.swift */; };
+		0549033D1C5E40C500163FDE /* MyOpenALSupport.c in Sources */ = {isa = PBXBuildFile; fileRef = 0549033B1C5E40C500163FDE /* MyOpenALSupport.c */; };
+		059AD7341CB836EE00EB418B /* MetronomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059AD7331CB836EE00EB418B /* MetronomeViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,16 +42,25 @@
 /* Begin PBXFileReference section */
 		054902FF1C5D193D00163FDE /* musictools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musictools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		054903021C5D193E00163FDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		054903041C5D193E00163FDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		054903041C5D193E00163FDE /* MetronomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeViewController.swift; sourceTree = "<group>"; };
 		054903071C5D193E00163FDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		054903091C5D193E00163FDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0549030B1C5D193E00163FDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		054903101C5D193E00163FDE /* musictoolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musictoolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		054903141C5D193E00163FDE /* musictoolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musictoolsTests.swift; sourceTree = "<group>"; };
 		054903161C5D193E00163FDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0549031B1C5D193E00163FDE /* musictoolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musictoolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0549031F1C5D193E00163FDE /* musictoolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musictoolsUITests.swift; sourceTree = "<group>"; };
 		054903211C5D193E00163FDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0549032D1C5D195E00163FDE /* Metronome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
+		0549032F1C5D197C00163FDE /* MetronomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomTests.swift; sourceTree = "<group>"; };
+		054903311C5D1B2000163FDE /* MetronomeActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeActions.swift; sourceTree = "<group>"; };
+		054903331C5E03B300163FDE /* sound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.m4a; sourceTree = "<group>"; };
+		054903361C5E049400163FDE /* BeatPlayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatPlayable.swift; sourceTree = "<group>"; };
+		054903381C5E06CA00163FDE /* BeatPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatPlayer.swift; sourceTree = "<group>"; };
+		0549033A1C5E40C500163FDE /* musictools-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "musictools-Bridging-Header.h"; sourceTree = "<group>"; };
+		0549033B1C5E40C500163FDE /* MyOpenALSupport.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MyOpenALSupport.c; sourceTree = "<group>"; };
+		0549033C1C5E40C500163FDE /* MyOpenALSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOpenALSupport.h; sourceTree = "<group>"; };
+		059AD7331CB836EE00EB418B /* MetronomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +111,18 @@
 		054903011C5D193D00163FDE /* musictools */ = {
 			isa = PBXGroup;
 			children = (
+				0549033B1C5E40C500163FDE /* MyOpenALSupport.c */,
+				0549033C1C5E40C500163FDE /* MyOpenALSupport.h */,
 				054903021C5D193E00163FDE /* AppDelegate.swift */,
-				054903041C5D193E00163FDE /* ViewController.swift */,
-				054903061C5D193E00163FDE /* Main.storyboard */,
-				054903091C5D193E00163FDE /* Assets.xcassets */,
+				054903361C5E049400163FDE /* BeatPlayable.swift */,
+				054903381C5E06CA00163FDE /* BeatPlayer.swift */,
 				0549030B1C5D193E00163FDE /* Info.plist */,
+				054903061C5D193E00163FDE /* Main.storyboard */,
+				0549032D1C5D195E00163FDE /* Metronome.swift */,
+				054903311C5D1B2000163FDE /* MetronomeActions.swift */,
+				054903351C5E03C300163FDE /* Resources */,
+				054903041C5D193E00163FDE /* MetronomeViewController.swift */,
+				0549033A1C5E40C500163FDE /* musictools-Bridging-Header.h */,
 			);
 			path = musictools;
 			sourceTree = "<group>";
@@ -107,8 +130,9 @@
 		054903131C5D193E00163FDE /* musictoolsTests */ = {
 			isa = PBXGroup;
 			children = (
-				054903141C5D193E00163FDE /* musictoolsTests.swift */,
 				054903161C5D193E00163FDE /* Info.plist */,
+				0549032F1C5D197C00163FDE /* MetronomTests.swift */,
+				059AD7331CB836EE00EB418B /* MetronomeViewControllerTests.swift */,
 			);
 			path = musictoolsTests;
 			sourceTree = "<group>";
@@ -120,6 +144,15 @@
 				054903211C5D193E00163FDE /* Info.plist */,
 			);
 			path = musictoolsUITests;
+			sourceTree = "<group>";
+		};
+		054903351C5E03C300163FDE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				054903091C5D193E00163FDE /* Assets.xcassets */,
+				054903331C5E03B300163FDE /* sound.m4a */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0549030A1C5D193E00163FDE /* Assets.xcassets in Resources */,
+				054903341C5E03B300163FDE /* sound.m4a in Resources */,
 				054903081C5D193E00163FDE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,7 +286,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				054903051C5D193E00163FDE /* ViewController.swift in Sources */,
+				054903371C5E049400163FDE /* BeatPlayable.swift in Sources */,
+				054903321C5D1B2000163FDE /* MetronomeActions.swift in Sources */,
+				054903391C5E06CA00163FDE /* BeatPlayer.swift in Sources */,
+				054903051C5D193E00163FDE /* MetronomeViewController.swift in Sources */,
+				0549032E1C5D195E00163FDE /* Metronome.swift in Sources */,
+				0549033D1C5E40C500163FDE /* MyOpenALSupport.c in Sources */,
 				054903031C5D193E00163FDE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +300,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				054903151C5D193E00163FDE /* musictoolsTests.swift in Sources */,
+				054903301C5D197C00163FDE /* MetronomTests.swift in Sources */,
+				059AD7341CB836EE00EB418B /* MetronomeViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,10 +426,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = musictools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.martinknabbe.musictools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "musictools/musictools-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -398,10 +441,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = musictools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.martinknabbe.musictools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "musictools/musictools-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -472,6 +517,7 @@
 				054903261C5D193E00163FDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		054903271C5D193E00163FDE /* Build configuration list for PBXNativeTarget "musictoolsTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +526,7 @@
 				054903291C5D193E00163FDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0549032A1C5D193E00163FDE /* Build configuration list for PBXNativeTarget "musictoolsUITests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +535,7 @@
 				0549032C1C5D193E00163FDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
