@@ -32,15 +32,15 @@ class MetronomeViewControllerTests: XCTestCase {
     func testViewDidLoadShouldSetTitleColorOfSelectedBeatButton() {
         guard let beatButton = MetronomeViewController.buttonWithTitle("0", inArray: sut.beatButtons) else { XCTFail(); return; }
         let expectedColor = UIColor(red: 90.0/255.0, green: 200.0/255.0, blue: 250.0/255.0, alpha: 1.0)
-        XCTAssertEqual(beatButton.titleColorForState(.Normal), expectedColor)
-        XCTAssertEqual(beatButton.titleColorForState(.Focused), expectedColor)
+        XCTAssertEqual(beatButton.titleColor(for: UIControlState()), expectedColor)
+        XCTAssertEqual(beatButton.titleColor(for: .focused), expectedColor)
     }
 
     func testViewDidLoadShouldSetTitleColorOfSelectedTempoButton() {
         guard let tempoButton = MetronomeViewController.buttonWithTitle("63", inArray: sut.tempoButtons) else { XCTFail(); return; }
         let expectedColor = UIColor(red: 90.0/255.0, green: 200.0/255.0, blue: 250.0/255.0, alpha: 1.0)
-        XCTAssertEqual(tempoButton.titleColorForState(.Normal), expectedColor)
-        XCTAssertEqual(tempoButton.titleColorForState(.Focused), expectedColor)
+        XCTAssertEqual(tempoButton.titleColor(for: UIControlState()), expectedColor)
+        XCTAssertEqual(tempoButton.titleColor(for: .focused), expectedColor)
     }
 
     func testChangeBeatShouldSetBeatOfMetronome() {
@@ -48,7 +48,7 @@ class MetronomeViewControllerTests: XCTestCase {
         sut.metronome = metronomeStub
 
         let button = UIButton()
-        button.setTitle("3", forState: .Normal)
+        button.setTitle("3", for: UIControlState())
         sut.changeBeat(button)
 
         XCTAssertEqual(metronomeStub.beat, 3)
@@ -59,13 +59,13 @@ class MetronomeViewControllerTests: XCTestCase {
         sut.metronome = metronomeStub
 
         let button = UIButton()
-        button.setTitle("3", forState: .Normal)
+        button.setTitle("3", for: UIControlState())
 
         sut.changeBeat(button)
 
         let expectedColor = UIColor(red: 90.0/255.0, green: 200.0/255.0, blue: 250.0/255.0, alpha: 1.0)
-        XCTAssertEqual(button.titleColorForState(.Normal), expectedColor)
-        XCTAssertEqual(button.titleColorForState(.Focused), expectedColor)
+        XCTAssertEqual(button.titleColor(for: UIControlState()), expectedColor)
+        XCTAssertEqual(button.titleColor(for: .focused), expectedColor)
     }
 
     func testChangeTempoShouldSetTempoOfMetronome() {
@@ -73,7 +73,7 @@ class MetronomeViewControllerTests: XCTestCase {
         sut.metronome = metronomeStub
 
         let button = UIButton()
-        button.setTitle("73", forState: .Normal)
+        button.setTitle("73", for: UIControlState())
 
         sut.changeTempo(button)
 
@@ -85,13 +85,13 @@ class MetronomeViewControllerTests: XCTestCase {
         sut.metronome = metronomeStub
 
         let button = UIButton()
-        button.setTitle("73", forState: .Normal)
+        button.setTitle("73", for: UIControlState())
 
         sut.changeTempo(button)
 
         let expectedColor = UIColor(red: 90.0/255.0, green: 200.0/255.0, blue: 250.0/255.0, alpha: 1.0)
-        XCTAssertEqual(button.titleColorForState(.Normal), expectedColor)
-        XCTAssertEqual(button.titleColorForState(.Focused), expectedColor)
+        XCTAssertEqual(button.titleColor(for: UIControlState()), expectedColor)
+        XCTAssertEqual(button.titleColor(for: .focused), expectedColor)
     }
 
     func testPressedPlayPauseShouldToggleMetronomePlayState() {
@@ -110,8 +110,8 @@ class MetronomeViewControllerTests: XCTestCase {
         let context = FocusUpdateStub()
         let animationCoordinator = UIFocusAnimationCoordinator()
 
-        measureBlock() {
-            self.sut.didUpdateFocusInContext(context, withAnimationCoordinator: animationCoordinator)
+        measure() {
+            self.sut.didUpdateFocus(in: context, with: animationCoordinator)
         }
     }
 
@@ -139,7 +139,7 @@ class MetronomeViewControllerTests: XCTestCase {
         override weak var nextFocusedView: UIView? {
             get {
                 let button = UIButton()
-                button.setTitle("168", forState: .Normal)
+                button.setTitle("168", for: UIControlState())
                 return button
             }
         }

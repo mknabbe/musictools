@@ -36,8 +36,8 @@ final class BeatPlayer: NSObject, BeatPlayable {
 
     private var source: ALuint = 0
     private var buffer: ALuint = 0
-    private var context: COpaquePointer = nil // ALCcontext
-    private var device: COpaquePointer = nil  // ALCdevice
+    private var context: OpaquePointer? = nil // ALCcontext
+    private var device: OpaquePointer? = nil  // ALCdevice
 
     // Start with our sound source slightly in front of the listener
     private let sourcePositionX: ALfloat = 0.0
@@ -90,9 +90,9 @@ final class BeatPlayer: NSObject, BeatPlayable {
         var size: ALsizei = 0
         var freq: ALsizei = 0
 
-        let bundle = NSBundle.mainBundle()
+        let bundle = Bundle.main()
         guard let path = bundle.pathForResource("sound", ofType: "m4a") else { NSLog("Could not find file!\n"); return }
-        let fileURL = NSURL.fileURLWithPath(path, isDirectory: false)
+        let fileURL = URL(fileURLWithPath: path, isDirectory: false)
 
         let data: UnsafeMutablePointer<Void> = MyGetOpenALAudioData(fileURL, &size, &format, &freq)
 

@@ -37,8 +37,8 @@ final class MetronomeViewController: UIViewController {
      - returns: The first button with the given `title` in `buttons` or nil if no button was found.
      - Complexity: O(n)
      */
-    static func buttonWithTitle(title: String, inArray buttons: [UIButton]) -> UIButton? {
-        for button in buttons where button.titleForState(.Normal) == title {
+    static func buttonWithTitle(_ title: String, inArray buttons: [UIButton]) -> UIButton? {
+        for button in buttons where button.title(for: UIControlState()) == title {
             return button
         }
 
@@ -84,36 +84,36 @@ final class MetronomeViewController: UIViewController {
         setupFocusGuide(focusGuide2, withFirstButton: tempo112Button, andSecondButton: tempo168Button)
     }
 
-    private func setupFocusGuide(focusGuide: UIFocusGuide, withFirstButton firstButton: UIButton, andSecondButton secondButton: UIButton) {
+    private func setupFocusGuide(_ focusGuide: UIFocusGuide, withFirstButton firstButton: UIButton, andSecondButton secondButton: UIButton) {
         view.addLayoutGuide(focusGuide)
 
-        focusGuide.leftAnchor.constraintEqualToAnchor(firstButton.leftAnchor).active = true
-        focusGuide.bottomAnchor.constraintEqualToAnchor(secondButton.bottomAnchor).active = true
-        focusGuide.rightAnchor.constraintEqualToAnchor(view.rightAnchor).active = true
-        focusGuide.heightAnchor.constraintEqualToAnchor(secondButton.heightAnchor).active = true
+        focusGuide.leftAnchor.constraint(equalTo: firstButton.leftAnchor).isActive = true
+        focusGuide.bottomAnchor.constraint(equalTo: secondButton.bottomAnchor).isActive = true
+        focusGuide.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        focusGuide.heightAnchor.constraint(equalTo: secondButton.heightAnchor).isActive = true
     }
 
     private func setupTitleColorOfInitiallySelectedButtons() {
         let initiallySelectedBeatButton = MetronomeViewController.buttonWithTitle(String(metronome.beat), inArray: beatButtons)
-        initiallySelectedBeatButton?.setTitleColor(MetronomeViewController.SelectedColor, forState: .Normal)
-        initiallySelectedBeatButton?.setTitleColor(MetronomeViewController.SelectedColor, forState: .Focused)
+        initiallySelectedBeatButton?.setTitleColor(MetronomeViewController.SelectedColor, for: UIControlState())
+        initiallySelectedBeatButton?.setTitleColor(MetronomeViewController.SelectedColor, for: .focused)
 
         let initiallySelectedTempoButton = MetronomeViewController.buttonWithTitle(String(metronome.tempo), inArray: tempoButtons)
-        initiallySelectedTempoButton?.setTitleColor(MetronomeViewController.SelectedColor, forState: .Normal)
-        initiallySelectedTempoButton?.setTitleColor(MetronomeViewController.SelectedColor, forState: .Focused)
+        initiallySelectedTempoButton?.setTitleColor(MetronomeViewController.SelectedColor, for: UIControlState())
+        initiallySelectedTempoButton?.setTitleColor(MetronomeViewController.SelectedColor, for: .focused)
     }
 
     // MARK: UIFocusEnvironment
 
-    override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
-        super.didUpdateFocusInContext(context, withAnimationCoordinator: coordinator)
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        super.didUpdateFocus(in: context, with: coordinator)
 
         /*
             Update the focus guide's `preferredFocusedView` depending on which
             button has the focus.
         */
         guard let nextFocusedButton = context.nextFocusedView as? UIButton else { return }
-        guard let buttonTitle = nextFocusedButton.titleForState(.Normal) else { return }
+        guard let buttonTitle = nextFocusedButton.title(for: UIControlState()) else { return }
 
         switch buttonTitle {
         case "6":
@@ -167,29 +167,29 @@ final class MetronomeViewController: UIViewController {
         }
     }
 
-    @IBAction func changeBeat(sender: UIButton) {
+    @IBAction func changeBeat(_ sender: UIButton) {
         if let previosulySelectedBeatButton = MetronomeViewController.buttonWithTitle(String(metronome.beat), inArray: beatButtons) {
-            previosulySelectedBeatButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-            previosulySelectedBeatButton.setTitleColor(UIColor.blackColor(), forState: .Focused)
+            previosulySelectedBeatButton.setTitleColor(UIColor.white(), for: UIControlState())
+            previosulySelectedBeatButton.setTitleColor(UIColor.black(), for: .focused)
         }
 
-        guard let title = sender.titleForState(.Normal) else { return }
+        guard let title = sender.title(for: UIControlState()) else { return }
         metronome.beat = Int(title) ?? Metronome.DefaultBeat
 
-        sender.setTitleColor(MetronomeViewController.SelectedColor, forState: .Normal)
-        sender.setTitleColor(MetronomeViewController.SelectedColor, forState: .Focused)
+        sender.setTitleColor(MetronomeViewController.SelectedColor, for: UIControlState())
+        sender.setTitleColor(MetronomeViewController.SelectedColor, for: .focused)
     }
 
-    @IBAction func changeTempo(sender: UIButton) {
+    @IBAction func changeTempo(_ sender: UIButton) {
         if let previosulySelectedTempoButton = MetronomeViewController.buttonWithTitle(String(metronome.tempo), inArray: tempoButtons) {
-            previosulySelectedTempoButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-            previosulySelectedTempoButton.setTitleColor(UIColor.blackColor(), forState: .Focused)
+            previosulySelectedTempoButton.setTitleColor(UIColor.white(), for: UIControlState())
+            previosulySelectedTempoButton.setTitleColor(UIColor.black(), for: .focused)
         }
 
-        guard let title = sender.titleForState(.Normal) else { return }
+        guard let title = sender.title(for: UIControlState()) else { return }
         metronome.tempo = Int(title) ?? Metronome.DefaultTempo
 
-        sender.setTitleColor(MetronomeViewController.SelectedColor, forState: .Normal)
-        sender.setTitleColor(MetronomeViewController.SelectedColor, forState: .Focused)
+        sender.setTitleColor(MetronomeViewController.SelectedColor, for: UIControlState())
+        sender.setTitleColor(MetronomeViewController.SelectedColor, for: .focused)
     }
 }

@@ -27,7 +27,7 @@ final class Metronome: NSObject, MetronomeActions {
     @IBOutlet var beatPlayer: BeatPlayer?
 
     /// Timer calling beatPlayer to play 'klick' sound.
-    private weak var soundTimer: NSTimer?
+    private weak var soundTimer: Timer?
 
     private(set) var playing = false
 
@@ -73,11 +73,11 @@ final class Metronome: NSObject, MetronomeActions {
         playing = false
     }
 
-    private func startTimerWithBeatsPerSecond(beatsPerSecond: Int) {
+    private func startTimerWithBeatsPerSecond(_ beatsPerSecond: Int) {
         guard let beatPlayer = beatPlayer else { return }
 
-        let intervalInSeconds = 60.0 / NSTimeInterval(beatsPerSecond)
+        let intervalInSeconds = 60.0 / TimeInterval(beatsPerSecond)
         soundTimer?.invalidate()
-        soundTimer = NSTimer.scheduledTimerWithTimeInterval(intervalInSeconds, target: beatPlayer, selector: "playBeat", userInfo: nil, repeats: true)
+        soundTimer = Timer.scheduledTimer(timeInterval: intervalInSeconds, target: beatPlayer, selector: Selector(("playBeat")), userInfo: nil, repeats: true)
     }
 }
