@@ -29,43 +29,27 @@ class MetronomeViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.metronome)
     }
 
-    func testViewDidLoadShouldSetTitleColorOfSelectedBeatButton() {
-        guard let beatButton = MetronomeViewController.buttonWithTitle("0", inArray: sut.beatButtons) else { XCTFail(); return; }
-        let expectedColor = UIColor(red: 90.0/255.0, green: 200.0/255.0, blue: 250.0/255.0, alpha: 1.0)
-        XCTAssertEqual(beatButton.titleColor(for: UIControlState()), expectedColor)
-        XCTAssertEqual(beatButton.titleColor(for: .focused), expectedColor)
-    }
-
     func testViewDidLoadShouldSetTitleColorOfSelectedTempoButton() {
         guard let tempoButton = MetronomeViewController.buttonWithTitle("63", inArray: sut.tempoButtons) else { XCTFail(); return; }
-        let expectedColor = UIColor(red: 90.0/255.0, green: 200.0/255.0, blue: 250.0/255.0, alpha: 1.0)
+        let expectedColor = MetronomeViewController.SelectedColor
         XCTAssertEqual(tempoButton.titleColor(for: UIControlState()), expectedColor)
         XCTAssertEqual(tempoButton.titleColor(for: .focused), expectedColor)
+    }
+
+    func testTintColorOfSegmentedControl() {
+        let expectedColor = MetronomeViewController.SelectedColor
+        XCTAssertEqual(sut.beatSegmentedControl.tintColor, expectedColor)
     }
 
     func testChangeBeatShouldSetBeatOfMetronome() {
         let metronomeStub = MetronomeStub()
         sut.metronome = metronomeStub
 
-        let button = UIButton()
-        button.setTitle("3", for: UIControlState())
-        sut.changeBeat(button)
+        let segmentedControl = UISegmentedControl(items: ["3"])
+        segmentedControl.selectedSegmentIndex = 0
+        sut.changeBeat(segmentedControl)
 
         XCTAssertEqual(metronomeStub.beat, 3)
-    }
-
-    func testChangeBeatShouldChangeTitleColorOfSelectedButton() {
-        let metronomeStub = MetronomeStub()
-        sut.metronome = metronomeStub
-
-        let button = UIButton()
-        button.setTitle("3", for: UIControlState())
-
-        sut.changeBeat(button)
-
-        let expectedColor = UIColor(red: 90.0/255.0, green: 200.0/255.0, blue: 250.0/255.0, alpha: 1.0)
-        XCTAssertEqual(button.titleColor(for: UIControlState()), expectedColor)
-        XCTAssertEqual(button.titleColor(for: .focused), expectedColor)
     }
 
     func testChangeTempoShouldSetTempoOfMetronome() {
@@ -89,7 +73,7 @@ class MetronomeViewControllerTests: XCTestCase {
 
         sut.changeTempo(button)
 
-        let expectedColor = UIColor(red: 90.0/255.0, green: 200.0/255.0, blue: 250.0/255.0, alpha: 1.0)
+        let expectedColor = MetronomeViewController.SelectedColor
         XCTAssertEqual(button.titleColor(for: UIControlState()), expectedColor)
         XCTAssertEqual(button.titleColor(for: .focused), expectedColor)
     }

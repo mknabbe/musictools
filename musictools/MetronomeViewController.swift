@@ -17,10 +17,10 @@ final class MetronomeViewController: UIViewController {
 
     // MARK: - Properties
 
-    static let SelectedColor = UIColor(red: 90.0/255.0, green: 200.0/255.0, blue: 250.0/255.0, alpha: 1.0)
+    static let SelectedColor = #colorLiteral(red: 0.3529411765, green: 0.7843137255, blue: 0.9803921569, alpha: 1)
 
-    @IBOutlet var beatButtons: [UIButton]!
     @IBOutlet var tempoButtons: [UIButton]!
+    @IBOutlet weak var beatSegmentedControl: UISegmentedControl!
 
     @IBOutlet var metronome: MetronomeActions!
 
@@ -50,6 +50,7 @@ final class MetronomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        beatSegmentedControl.tintColor = MetronomeViewController.SelectedColor
         setupFocusGuides()
         setupTitleColorOfInitiallySelectedButtons()
     }
@@ -61,11 +62,15 @@ final class MetronomeViewController: UIViewController {
     }
 
     private func setupFocusGuide0() {
-        guard let beat6Button = MetronomeViewController.buttonWithTitle("6", inArray: beatButtons) else { return }
         guard let tempo50Button = MetronomeViewController.buttonWithTitle("50", inArray: tempoButtons) else { return }
 
         focusGuide0 = UIFocusGuide()
-        setupFocusGuide(focusGuide0, withFirstButton: tempo50Button, andSecondButton: beat6Button)
+        view.addLayoutGuide(focusGuide0)
+
+        focusGuide0.leftAnchor.constraint(equalTo: tempo50Button.leftAnchor).isActive = true
+        focusGuide0.bottomAnchor.constraint(equalTo: beatSegmentedControl.bottomAnchor).isActive = true
+        focusGuide0.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        focusGuide0.heightAnchor.constraint(equalTo: beatSegmentedControl.heightAnchor).isActive = true
     }
 
     private func setupFocusGuide1() {
@@ -94,10 +99,6 @@ final class MetronomeViewController: UIViewController {
     }
 
     private func setupTitleColorOfInitiallySelectedButtons() {
-        let initiallySelectedBeatButton = MetronomeViewController.buttonWithTitle(String(metronome.beat), inArray: beatButtons)
-        initiallySelectedBeatButton?.setTitleColor(MetronomeViewController.SelectedColor, for: UIControlState())
-        initiallySelectedBeatButton?.setTitleColor(MetronomeViewController.SelectedColor, for: .focused)
-
         let initiallySelectedTempoButton = MetronomeViewController.buttonWithTitle(String(metronome.tempo), inArray: tempoButtons)
         initiallySelectedTempoButton?.setTitleColor(MetronomeViewController.SelectedColor, for: UIControlState())
         initiallySelectedTempoButton?.setTitleColor(MetronomeViewController.SelectedColor, for: .focused)
@@ -112,19 +113,17 @@ final class MetronomeViewController: UIViewController {
             Update the focus guide's `preferredFocusedView` depending on which
             button has the focus.
         */
-        guard let nextFocusedButton = context.nextFocusedView as? UIButton else { return }
-        guard let buttonTitle = nextFocusedButton.title(for: UIControlState()) else { return }
-
-        switch buttonTitle {
-        case "6":
+        guard let nextFocusedButton = context.nextFocusedView as? UIButton else {
             if let tempo50Button = MetronomeViewController.buttonWithTitle("50", inArray: tempoButtons) {
                 focusGuide0.preferredFocusedView = tempo50Button
             }
+            return
+        }
+        guard let buttonTitle = nextFocusedButton.title(for: UIControlState()) else { return }
 
+        switch buttonTitle {
         case "50", "52", "54", "56", "58":
-            if let beat6Button = MetronomeViewController.buttonWithTitle("6", inArray: beatButtons) {
-                focusGuide0.preferredFocusedView = beat6Button
-            }
+            focusGuide0.preferredFocusedView = beatSegmentedControl
 
             if let tempo76Button = MetronomeViewController.buttonWithTitle("76", inArray: tempoButtons) {
                 focusGuide1.preferredFocusedView = tempo76Button
@@ -167,17 +166,9 @@ final class MetronomeViewController: UIViewController {
         }
     }
 
-    @IBAction func changeBeat(_ sender: UIButton) {
-        if let previosulySelectedBeatButton = MetronomeViewController.buttonWithTitle(String(metronome.beat), inArray: beatButtons) {
-            previosulySelectedBeatButton.setTitleColor(UIColor.white(), for: UIControlState())
-            previosulySelectedBeatButton.setTitleColor(UIColor.black(), for: .focused)
-        }
-
-        guard let title = sender.title(for: UIControlState()) else { return }
+    @IBAction func changeBeat(_ sender: UISegmentedControl) {
+        guard let title = sender.titleForSegment(at: sender.selectedSegmentIndex) else { return }
         metronome.beat = Int(title) ?? Metronome.DefaultBeat
-
-        sender.setTitleColor(MetronomeViewController.SelectedColor, for: UIControlState())
-        sender.setTitleColor(MetronomeViewController.SelectedColor, for: .focused)
     }
 
     @IBAction func changeTempo(_ sender: UIButton) {
