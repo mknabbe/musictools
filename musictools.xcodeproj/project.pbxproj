@@ -20,6 +20,8 @@
 		054903391C5E06CA00163FDE /* BeatPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054903381C5E06CA00163FDE /* BeatPlayer.swift */; };
 		0549033D1C5E40C500163FDE /* MyOpenALSupport.c in Sources */ = {isa = PBXBuildFile; fileRef = 0549033B1C5E40C500163FDE /* MyOpenALSupport.c */; };
 		059AD7341CB836EE00EB418B /* MetronomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059AD7331CB836EE00EB418B /* MetronomeViewControllerTests.swift */; };
+		05DFC9571D1EB51800ED343F /* MetronomeViewController_CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DFC9561D1EB51800ED343F /* MetronomeViewController_CollectionView.swift */; };
+		05DFC95B1D1FD2D400ED343F /* LabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DFC95A1D1FD2D400ED343F /* LabelCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		0549033B1C5E40C500163FDE /* MyOpenALSupport.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MyOpenALSupport.c; sourceTree = "<group>"; };
 		0549033C1C5E40C500163FDE /* MyOpenALSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOpenALSupport.h; sourceTree = "<group>"; };
 		059AD7331CB836EE00EB418B /* MetronomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeViewControllerTests.swift; sourceTree = "<group>"; };
+		05DFC9561D1EB51800ED343F /* MetronomeViewController_CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeViewController_CollectionView.swift; sourceTree = "<group>"; };
+		05DFC95A1D1FD2D400ED343F /* LabelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 		054903011C5D193D00163FDE /* musictools */ = {
 			isa = PBXGroup;
 			children = (
+				05DFC9591D1FD2B700ED343F /* View */,
+				05DFC9581D1FD2A000ED343F /* Controller */,
 				0549033B1C5E40C500163FDE /* MyOpenALSupport.c */,
 				0549033C1C5E40C500163FDE /* MyOpenALSupport.h */,
 				054903021C5D193E00163FDE /* AppDelegate.swift */,
@@ -121,7 +127,6 @@
 				0549032D1C5D195E00163FDE /* Metronome.swift */,
 				054903311C5D1B2000163FDE /* MetronomeActions.swift */,
 				054903351C5E03C300163FDE /* Resources */,
-				054903041C5D193E00163FDE /* MetronomeViewController.swift */,
 				0549033A1C5E40C500163FDE /* musictools-Bridging-Header.h */,
 			);
 			path = musictools;
@@ -153,6 +158,23 @@
 				054903331C5E03B300163FDE /* sound.m4a */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		05DFC9581D1FD2A000ED343F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				054903041C5D193E00163FDE /* MetronomeViewController.swift */,
+				05DFC9561D1EB51800ED343F /* MetronomeViewController_CollectionView.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		05DFC9591D1FD2B700ED343F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05DFC95A1D1FD2D400ED343F /* LabelCollectionViewCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,9 +314,11 @@
 				054903371C5E049400163FDE /* BeatPlayable.swift in Sources */,
 				054903321C5D1B2000163FDE /* MetronomeActions.swift in Sources */,
 				054903391C5E06CA00163FDE /* BeatPlayer.swift in Sources */,
+				05DFC95B1D1FD2D400ED343F /* LabelCollectionViewCell.swift in Sources */,
 				054903051C5D193E00163FDE /* MetronomeViewController.swift in Sources */,
 				0549032E1C5D195E00163FDE /* Metronome.swift in Sources */,
 				0549033D1C5E40C500163FDE /* MyOpenALSupport.c in Sources */,
+				05DFC9571D1EB51800ED343F /* MetronomeViewController_CollectionView.swift in Sources */,
 				054903031C5D193E00163FDE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

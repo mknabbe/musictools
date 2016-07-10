@@ -18,7 +18,7 @@ class musictoolsUITests: XCTestCase {
 
     // MARK: - Focus guide tests
 
-    func testFirstRowShouldMoveFocusToSecondRowAtEndOfRow() {
+    func testFocusGuideShouldNavigateToCollectionView() {
         XCUIRemote.shared().press(.right)
         XCUIRemote.shared().press(.right)
         XCUIRemote.shared().press(.right)
@@ -26,70 +26,19 @@ class musictoolsUITests: XCTestCase {
         XCUIRemote.shared().press(.right)
         XCUIRemote.shared().press(.right)
 
-        let expectedButton = XCUIApplication().buttons["50"]
-        XCTAssertTrue(expectedButton.hasFocus)
+        let expectedView = XCUIApplication().collectionViews.element.cells["40"]
+        XCTAssertTrue(expectedView.hasFocus)
     }
 
-    func testThirdRowShouldMoveFocusToFourthRowAtEndOfRow() {
+    func testFocusGuideShouldNavigateToSegmentedControl() {
         XCUIRemote.shared().press(.down)
-        XCUIRemote.shared().press(.down)
         XCUIRemote.shared().press(.right)
         XCUIRemote.shared().press(.right)
         XCUIRemote.shared().press(.right)
         XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
+        XCUIRemote.shared().press(.up)
 
-        let expectedButton = XCUIApplication().buttons["100"]
-        XCTAssertTrue(expectedButton.hasFocus)
-    }
-
-    func testFithRowShouldMoveFocusToSixthRowAtEndOfROw() {
-        XCUIRemote.shared().press(.down)
-        XCUIRemote.shared().press(.down)
-        XCUIRemote.shared().press(.down)
-        XCUIRemote.shared().press(.down)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-
-        let expectedButton = XCUIApplication().buttons["208"]
-        XCTAssertTrue(expectedButton.hasFocus)
-    }
-
-    func testSecondRowShouldMoveFocusToThirdRowWhenNavigatingDown() {
-        XCUIRemote.shared().press(.down)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.down)
-
-        let expectedButton = XCUIApplication().buttons["76"]
-        XCTAssertTrue(expectedButton.hasFocus)
-    }
-
-    func testFourthRowShouldMoveFocusToFithRowWhenNavigatingDown() {
-        XCUIRemote.shared().press(.down)
-        XCUIRemote.shared().press(.down)
-        XCUIRemote.shared().press(.down)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.right)
-        XCUIRemote.shared().press(.down)
-
-        let expectedButton = XCUIApplication().buttons["168"]
+        let expectedButton = XCUIApplication().segmentedControls.element.buttons["0"]
         XCTAssertTrue(expectedButton.hasFocus)
     }
 }

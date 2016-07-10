@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11163.2" systemVersion="15F34" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11133"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,361 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gaa-aK-AHv">
-                                <subviews>
-                                    <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QK-O8-BCW">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="40"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="rHp-DQ-TfK"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCX-hR-gIZ">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="42"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="eec-9B-k5P"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXr-GB-VLA">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="44"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Jvf-LA-m5y"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="46" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joC-fM-zfp">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="46"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="HqD-rN-ws6"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="48" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0r1-7P-6rw">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="48"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="P1Y-tQ-mUq"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="50" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zt-BM-uoe">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="50"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="NnQ-3g-7jm"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="52" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83y-gp-bgJ">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="52"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="6Sl-nV-n00"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="54" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nt9-9N-ZSe">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="54"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="7In-Fi-8Tk"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="56" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76M-S6-Fbg">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="56"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="ATN-bw-PKX"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="58" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10S-b0-ztx">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="58"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="iP4-HB-Gt2"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="joC-fM-zfp" firstAttribute="width" secondItem="1QK-O8-BCW" secondAttribute="width" id="9Cg-6d-bi3"/>
-                                    <constraint firstItem="dCX-hR-gIZ" firstAttribute="width" secondItem="1QK-O8-BCW" secondAttribute="width" id="Bno-fe-obJ"/>
-                                    <constraint firstItem="0r1-7P-6rw" firstAttribute="width" secondItem="1QK-O8-BCW" secondAttribute="width" id="YR6-t8-Pht"/>
-                                    <constraint firstItem="83y-gp-bgJ" firstAttribute="width" secondItem="1QK-O8-BCW" secondAttribute="width" id="ZZE-26-ee1"/>
-                                    <constraint firstItem="nt9-9N-ZSe" firstAttribute="width" secondItem="1QK-O8-BCW" secondAttribute="width" id="gdc-OK-zBh"/>
-                                    <constraint firstItem="76M-S6-Fbg" firstAttribute="width" secondItem="1QK-O8-BCW" secondAttribute="width" id="h0V-hM-v2u"/>
-                                    <constraint firstItem="MXr-GB-VLA" firstAttribute="width" secondItem="1QK-O8-BCW" secondAttribute="width" id="k07-qf-T6S"/>
-                                    <constraint firstItem="10S-b0-ztx" firstAttribute="width" secondItem="1QK-O8-BCW" secondAttribute="width" id="kZj-JB-7fZ"/>
-                                    <constraint firstItem="6zt-BM-uoe" firstAttribute="width" secondItem="1QK-O8-BCW" secondAttribute="width" id="rgy-su-Jxn"/>
-                                </constraints>
-                            </stackView>
-                            <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Largo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAm-dD-9wu">
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.21176470589999999" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                <color key="textColor" red="0.3529411764705882" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAm-dD-9wu">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Qkz-uO-LJe">
-                                <subviews>
-                                    <button opaque="NO" tag="63" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzr-sA-PUD">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="63"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="tAt-He-xac"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="66" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEE-KP-vEP">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="66"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="QWh-LF-ReX"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Larghetto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgm-kP-K7o">
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.21176470589999999" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                <color key="textColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="l9C-QA-0YC">
-                                <subviews>
-                                    <button opaque="NO" tag="69" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27H-u1-A5I">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="69"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="3oU-fk-IdK"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="72" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1X1-1l-RpV">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="72"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="pPU-Cd-jN0"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="76" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ds2-fl-yw7">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="76"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="5L8-Ih-3iO"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adagio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEu-gN-pcf">
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.21176470589999999" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                <color key="textColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="iyv-gL-kNo">
-                                <subviews>
-                                    <button opaque="NO" tag="80" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eF8-2d-d0J">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="80"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="xfI-dK-132"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="84" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kt1-Yb-Dzg">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="84"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="BRm-CE-gNk"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="88" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IB-RW-wcl">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="88"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="OO8-cN-66x"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="92" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfA-Y4-gvJ">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="92"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="n9d-Yc-tAi"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="96" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNs-Gr-c7h">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="96"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="gBZ-Mq-DfV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7g-pP-mGD">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="100"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="rv0-Y8-qIE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTr-Xm-Gwk">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="104"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="G6Q-MP-lDJ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="108" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMz-OY-4FN">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="108"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="2Lk-pu-qCi"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Andante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjR-C0-BoC">
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.21176470589999999" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                <color key="textColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Fkg-iC-4LZ">
-                                <subviews>
-                                    <button opaque="NO" tag="112" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ec-2c-nRD">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="112"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="WcC-Bf-3fl"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="116" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcO-cV-eNq">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="116"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Cbr-WY-1Z9"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtL-4A-Pfm">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="120"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Xsr-QK-pC2"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moderato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVN-HZ-fLX">
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.21176470589999999" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                <color key="textColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="f0A-Us-tNx">
-                                <subviews>
-                                    <button opaque="NO" tag="126" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUQ-ca-XDw">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="126"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="bhm-hD-8ag"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="132" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSs-yO-15q">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="132"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="DT8-g1-DRU"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="138" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XtS-iE-Gkf">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="138"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="TjR-rT-ZhN"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="144" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjA-dk-exT">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="144"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="WpD-It-t0m"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="152" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2X-Y7-Zmd">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="152"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="XBg-Tj-hBZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="160" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40e-U8-XeI">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="160"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="6bR-xG-zxD"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="168" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbu-zr-3Oe">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="168"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="KIR-UG-7oV"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allegro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r72-Ki-Jtv">
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.21176470589999999" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                <color key="textColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gP6-wB-Ul1">
-                                <subviews>
-                                    <button opaque="NO" tag="176" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdQ-eZ-haf">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="176"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Icf-er-rBr"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="184" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="200-4N-lTh">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="184"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="S2q-tm-4vE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="192" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1x3-2z-Kpl">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="192"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="6Qy-QM-rlQ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="T1h-xZ-u7h">
-                                <subviews>
-                                    <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Uj-5q-Owg">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="200"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Wvu-mh-4MK"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="208" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyX-hV-uLK">
-                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="208"/>
-                                        <connections>
-                                            <action selector="changeTempo:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="ZtE-qz-23o"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prestissimo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZB-39-Md1">
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.21176470589999999" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                <color key="textColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tj7-DM-euW">
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.21176470589999999" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                <color key="textColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tj7-DM-euW">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jHp-Tw-fd1">
@@ -385,55 +38,69 @@
                                     <segment title="5"/>
                                     <segment title="6"/>
                                 </segments>
-                                <color key="tintColor" red="0.3529411764705882" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="changeBeat:" destination="BYZ-38-t0r" eventType="valueChanged" id="EWi-bL-e2d"/>
                                 </connections>
                             </segmentedControl>
-                            <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCc-JQ-95Y">
-                                <color key="backgroundColor" red="0.87843137250000003" green="0.21176470589999999" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                <color key="textColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JSm-LR-V65">
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="310" id="PCc-Qz-7u8"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="60" minimumInteritemSpacing="10" id="iSN-ys-b0j">
+                                    <size key="itemSize" width="300" height="169"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LabelCollectionViewCell" id="L8M-4I-T5w" customClass="LabelCollectionViewCell" customModule="musictools" customModuleProvider="target">
+                                        <frame key="frameInset" minY="71" width="300" height="169"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="169"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LightRect" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hL0-TA-BBl">
+                                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50L-60-7KJ">
+                                                    <frame key="frameInset" minX="0.0%" minY="0.0%" width="300" height="169"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="42"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="hL0-TA-BBl" secondAttribute="trailing" id="2Pc-HB-jCV"/>
+                                            <constraint firstAttribute="bottom" secondItem="hL0-TA-BBl" secondAttribute="bottom" id="PU4-gv-NgA"/>
+                                            <constraint firstItem="hL0-TA-BBl" firstAttribute="leading" secondItem="L8M-4I-T5w" secondAttribute="leading" id="Z6T-TS-Sqx"/>
+                                            <constraint firstItem="hL0-TA-BBl" firstAttribute="top" secondItem="L8M-4I-T5w" secondAttribute="top" id="awQ-7D-fy2"/>
+                                        </constraints>
+                                        <size key="customSize" width="300" height="169"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="hL0-TA-BBl" id="Nfp-r1-9Zs"/>
+                                            <outlet property="label" destination="50L-60-7KJ" id="ZNN-zW-t3d"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="2Om-w5-NlR"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ylY-c6-eNy"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.8784313725490196" green="0.21176470588235294" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="iyv-gL-kNo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="0a3-43-kDR"/>
-                            <constraint firstItem="r72-Ki-Jtv" firstAttribute="top" secondItem="iyv-gL-kNo" secondAttribute="bottom" constant="32" id="24Z-No-dti"/>
-                            <constraint firstItem="f0A-Us-tNx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="2Xh-fe-4uK"/>
-                            <constraint firstItem="wjR-C0-BoC" firstAttribute="top" secondItem="Qkz-uO-LJe" secondAttribute="bottom" constant="32" id="4v9-iA-Zpy"/>
-                            <constraint firstItem="Fkg-iC-4LZ" firstAttribute="top" secondItem="iyv-gL-kNo" secondAttribute="top" id="6Kv-Fg-z8l"/>
-                            <constraint firstItem="lgm-kP-K7o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="8OF-s6-ySp"/>
-                            <constraint firstItem="wjR-C0-BoC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="8Ru-Te-YeM"/>
-                            <constraint firstItem="lgm-kP-K7o" firstAttribute="top" secondItem="gaa-aK-AHv" secondAttribute="bottom" constant="32" id="9hQ-Ph-7g9"/>
-                            <constraint firstItem="gP6-wB-Ul1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="9wO-aV-aLR"/>
+                            <constraint firstItem="JSm-LR-V65" firstAttribute="top" secondItem="QAm-dD-9wu" secondAttribute="bottom" constant="16" id="0fH-MW-QDo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JSm-LR-V65" secondAttribute="bottom" constant="60" id="2en-5F-K6l"/>
                             <constraint firstItem="QAm-dD-9wu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="Aqc-nb-x3r"/>
-                            <constraint firstItem="Fkg-iC-4LZ" firstAttribute="top" secondItem="VVN-HZ-fLX" secondAttribute="bottom" constant="16" id="BSg-7E-pHF"/>
-                            <constraint firstItem="iyv-gL-kNo" firstAttribute="top" secondItem="wjR-C0-BoC" secondAttribute="bottom" constant="16" id="C18-xR-rfU"/>
-                            <constraint firstItem="lCc-JQ-95Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="C2X-Ha-6Ul"/>
-                            <constraint firstItem="gP6-wB-Ul1" firstAttribute="top" secondItem="lCc-JQ-95Y" secondAttribute="bottom" constant="16" id="DAI-5u-7Xr"/>
-                            <constraint firstItem="T1h-xZ-u7h" firstAttribute="top" secondItem="oZB-39-Md1" secondAttribute="bottom" constant="16" id="Dnm-kQ-NTX"/>
-                            <constraint firstItem="r72-Ki-Jtv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="FCm-D1-CrH"/>
-                            <constraint firstItem="l9C-QA-0YC" firstAttribute="top" secondItem="Qkz-uO-LJe" secondAttribute="top" id="HAX-bY-ZVM"/>
-                            <constraint firstItem="oZB-39-Md1" firstAttribute="leading" secondItem="T1h-xZ-u7h" secondAttribute="leading" id="HDz-lm-x6t"/>
-                            <constraint firstItem="gaa-aK-AHv" firstAttribute="top" secondItem="QAm-dD-9wu" secondAttribute="bottom" constant="16" id="Jtn-4q-lGV"/>
-                            <constraint firstItem="T1h-xZ-u7h" firstAttribute="top" secondItem="gP6-wB-Ul1" secondAttribute="top" id="NFh-Od-eFg"/>
-                            <constraint firstItem="Fkg-iC-4LZ" firstAttribute="leading" secondItem="iyv-gL-kNo" secondAttribute="trailing" constant="40" id="NiF-Jn-eho"/>
-                            <constraint firstItem="lCc-JQ-95Y" firstAttribute="top" secondItem="f0A-Us-tNx" secondAttribute="bottom" constant="32" id="PpY-2h-dV1"/>
-                            <constraint firstItem="gaa-aK-AHv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="Q7O-ar-bLq"/>
-                            <constraint firstItem="f0A-Us-tNx" firstAttribute="top" secondItem="r72-Ki-Jtv" secondAttribute="bottom" constant="16" id="RiX-70-sF8"/>
-                            <constraint firstItem="Qkz-uO-LJe" firstAttribute="top" secondItem="lgm-kP-K7o" secondAttribute="bottom" constant="16" id="SZ1-4J-lua"/>
-                            <constraint firstItem="VVN-HZ-fLX" firstAttribute="leading" secondItem="Fkg-iC-4LZ" secondAttribute="leading" id="Wm0-eT-WsM"/>
-                            <constraint firstItem="tj7-DM-euW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="YuF-cI-2Oi"/>
-                            <constraint firstItem="l9C-QA-0YC" firstAttribute="top" secondItem="YEu-gN-pcf" secondAttribute="bottom" constant="16" id="ZL2-ur-FuQ"/>
+                            <constraint firstItem="JSm-LR-V65" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="Iqa-Cf-b6B"/>
                             <constraint firstItem="QAm-dD-9wu" firstAttribute="top" secondItem="jHp-Tw-fd1" secondAttribute="bottom" constant="32" id="b5c-un-X1L"/>
-                            <constraint firstItem="l9C-QA-0YC" firstAttribute="leading" secondItem="Qkz-uO-LJe" secondAttribute="trailing" constant="40" id="bO0-C2-9WM"/>
-                            <constraint firstItem="T1h-xZ-u7h" firstAttribute="leading" secondItem="gP6-wB-Ul1" secondAttribute="trailing" constant="40" id="dKL-LF-jwS"/>
                             <constraint firstItem="jHp-Tw-fd1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="ecz-OK-DvP"/>
-                            <constraint firstItem="Qkz-uO-LJe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="jba-iP-u0H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JSm-LR-V65" secondAttribute="trailing" constant="90" id="g4C-39-6j5"/>
                             <constraint firstItem="tj7-DM-euW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="sev-bU-IK5"/>
-                            <constraint firstItem="YEu-gN-pcf" firstAttribute="leading" secondItem="l9C-QA-0YC" secondAttribute="leading" id="x3S-uW-kuj"/>
                             <constraint firstItem="jHp-Tw-fd1" firstAttribute="top" secondItem="tj7-DM-euW" secondAttribute="bottom" constant="16" id="yXi-sZ-bcH"/>
                         </constraints>
                         <connections>
@@ -443,44 +110,7 @@
                     <connections>
                         <outlet property="beatSegmentedControl" destination="jHp-Tw-fd1" id="iQc-a2-9FS"/>
                         <outlet property="metronome" destination="dph-52-IOk" id="ir3-xi-P5r"/>
-                        <outletCollection property="tempoButtons" destination="1QK-O8-BCW" collectionClass="NSMutableArray" id="1fR-Cm-oxs"/>
-                        <outletCollection property="tempoButtons" destination="dCX-hR-gIZ" collectionClass="NSMutableArray" id="GKp-fE-ZL1"/>
-                        <outletCollection property="tempoButtons" destination="MXr-GB-VLA" collectionClass="NSMutableArray" id="4mM-5x-NiQ"/>
-                        <outletCollection property="tempoButtons" destination="joC-fM-zfp" collectionClass="NSMutableArray" id="iPf-MQ-HNf"/>
-                        <outletCollection property="tempoButtons" destination="0r1-7P-6rw" collectionClass="NSMutableArray" id="wNg-DZ-x2z"/>
-                        <outletCollection property="tempoButtons" destination="6zt-BM-uoe" collectionClass="NSMutableArray" id="DlP-xk-otC"/>
-                        <outletCollection property="tempoButtons" destination="83y-gp-bgJ" collectionClass="NSMutableArray" id="S4P-Hv-7Ql"/>
-                        <outletCollection property="tempoButtons" destination="nt9-9N-ZSe" collectionClass="NSMutableArray" id="BfG-nO-LWR"/>
-                        <outletCollection property="tempoButtons" destination="76M-S6-Fbg" collectionClass="NSMutableArray" id="t9I-pN-huy"/>
-                        <outletCollection property="tempoButtons" destination="10S-b0-ztx" collectionClass="NSMutableArray" id="BRF-dI-YbV"/>
-                        <outletCollection property="tempoButtons" destination="Dzr-sA-PUD" collectionClass="NSMutableArray" id="dcv-54-Vgc"/>
-                        <outletCollection property="tempoButtons" destination="UEE-KP-vEP" collectionClass="NSMutableArray" id="AHe-qK-slB"/>
-                        <outletCollection property="tempoButtons" destination="27H-u1-A5I" collectionClass="NSMutableArray" id="qiZ-ah-yt9"/>
-                        <outletCollection property="tempoButtons" destination="1X1-1l-RpV" collectionClass="NSMutableArray" id="Bex-lU-DwM"/>
-                        <outletCollection property="tempoButtons" destination="ds2-fl-yw7" collectionClass="NSMutableArray" id="8u2-Ol-jmw"/>
-                        <outletCollection property="tempoButtons" destination="eF8-2d-d0J" collectionClass="NSMutableArray" id="15v-YC-DZB"/>
-                        <outletCollection property="tempoButtons" destination="Kt1-Yb-Dzg" collectionClass="NSMutableArray" id="mAO-P2-YvL"/>
-                        <outletCollection property="tempoButtons" destination="1IB-RW-wcl" collectionClass="NSMutableArray" id="DEr-fy-Wav"/>
-                        <outletCollection property="tempoButtons" destination="jfA-Y4-gvJ" collectionClass="NSMutableArray" id="wVN-UL-c55"/>
-                        <outletCollection property="tempoButtons" destination="PNs-Gr-c7h" collectionClass="NSMutableArray" id="cZm-Ob-HFs"/>
-                        <outletCollection property="tempoButtons" destination="E7g-pP-mGD" collectionClass="NSMutableArray" id="Ki0-Ok-ePl"/>
-                        <outletCollection property="tempoButtons" destination="GTr-Xm-Gwk" collectionClass="NSMutableArray" id="2aB-w1-u4f"/>
-                        <outletCollection property="tempoButtons" destination="HMz-OY-4FN" collectionClass="NSMutableArray" id="4f6-rY-imc"/>
-                        <outletCollection property="tempoButtons" destination="6Ec-2c-nRD" collectionClass="NSMutableArray" id="l8M-cu-p0d"/>
-                        <outletCollection property="tempoButtons" destination="TcO-cV-eNq" collectionClass="NSMutableArray" id="s9G-45-hFA"/>
-                        <outletCollection property="tempoButtons" destination="PtL-4A-Pfm" collectionClass="NSMutableArray" id="qdg-Q2-bpR"/>
-                        <outletCollection property="tempoButtons" destination="bUQ-ca-XDw" collectionClass="NSMutableArray" id="dyQ-vh-dx7"/>
-                        <outletCollection property="tempoButtons" destination="cSs-yO-15q" collectionClass="NSMutableArray" id="qXP-iZ-GNN"/>
-                        <outletCollection property="tempoButtons" destination="XtS-iE-Gkf" collectionClass="NSMutableArray" id="LyA-N8-451"/>
-                        <outletCollection property="tempoButtons" destination="zjA-dk-exT" collectionClass="NSMutableArray" id="9Jv-4P-eqI"/>
-                        <outletCollection property="tempoButtons" destination="n2X-Y7-Zmd" collectionClass="NSMutableArray" id="cFK-tV-Wc4"/>
-                        <outletCollection property="tempoButtons" destination="40e-U8-XeI" collectionClass="NSMutableArray" id="8uW-MO-kcc"/>
-                        <outletCollection property="tempoButtons" destination="sbu-zr-3Oe" collectionClass="NSMutableArray" id="eSg-LZ-huo"/>
-                        <outletCollection property="tempoButtons" destination="PdQ-eZ-haf" collectionClass="NSMutableArray" id="H9u-tp-0kr"/>
-                        <outletCollection property="tempoButtons" destination="200-4N-lTh" collectionClass="NSMutableArray" id="yvA-uC-qr7"/>
-                        <outletCollection property="tempoButtons" destination="1x3-2z-Kpl" collectionClass="NSMutableArray" id="L1p-jJ-ZJv"/>
-                        <outletCollection property="tempoButtons" destination="0Uj-5q-Owg" collectionClass="NSMutableArray" id="Fza-rG-FZk"/>
-                        <outletCollection property="tempoButtons" destination="hyX-hV-uLK" collectionClass="NSMutableArray" id="2fg-Eu-2IE"/>
+                        <outlet property="tempoCollectionView" destination="JSm-LR-V65" id="rjK-XW-gYM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -500,6 +130,9 @@
             <point key="canvasLocation" x="359" y="145"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LightRect" width="240" height="135"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <nil key="statusBar"/>
         <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>

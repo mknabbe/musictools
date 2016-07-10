@@ -90,7 +90,7 @@ final class BeatPlayer: NSObject, BeatPlayable {
         var size: ALsizei = 0
         var freq: ALsizei = 0
 
-        let bundle = Bundle.main()
+        let bundle = Bundle.main
         guard let path = bundle.pathForResource("sound", ofType: "m4a") else { NSLog("Could not find file!\n"); return }
         let fileURL = URL(fileURLWithPath: path, isDirectory: false)
 
