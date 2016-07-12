@@ -24,7 +24,15 @@ extension MetronomeViewController: UICollectionViewDataSource {
         if indexPath.item == selectedTempoIndex {
             cell.label.textColor = MetronomeViewController.selectedColor
         } else {
-            cell.label.textColor = UIColor.black()
+            if #available(tvOS 10.0, *) {
+                if traitCollection.userInterfaceStyle == .dark {
+                    cell.label.textColor = UIColor.lightGray()
+                } else {
+                    cell.label.textColor = UIColor.darkGray()
+                }
+            } else {
+                cell.label.textColor = UIColor.darkGray()
+            }
         }
 
         return cell

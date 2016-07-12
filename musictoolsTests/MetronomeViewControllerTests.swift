@@ -57,7 +57,7 @@ class MetronomeViewControllerTests: XCTestCase {
         XCTAssertEqual(metronomeStub.beat, 3)
     }
 
-    func testSelectingACollectionCellShouödChangeTempoOfMetronome() {
+    func testSelectingACollectionCellShouldChangeTempoOfMetronome() {
         let metronomeStub = MetronomeStub()
         sut.metronome = metronomeStub
 

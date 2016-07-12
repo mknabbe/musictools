@@ -37,6 +37,20 @@ class LabelCollectionViewCell : UICollectionViewCell {
 
         imageView.adjustsImageWhenAncestorFocused = true
         imageView.clipsToBounds = false
-        imageView.image = UIImage(named: "LightRect")
+    }
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        if #available(tvOS 10.0, *) {
+            guard(traitCollection.userInterfaceStyle != previousTraitCollection?.userInterfaceStyle)
+                else { return }
+
+            if traitCollection.userInterfaceStyle == .dark {
+                label.textColor = UIColor.lightGray()
+            } else {
+                label.textColor = UIColor.darkGray()
+            }
+        }
     }
 }

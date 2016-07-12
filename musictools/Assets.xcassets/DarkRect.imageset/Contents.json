@@ -1,22 +1,8 @@
 {
   "images" : [
     {
-      "resizing" : {
-        "mode" : "9-part",
-        "center" : {
-          "mode" : "tile",
-          "width" : 1,
-          "height" : 1
-        },
-        "cap-insets" : {
-          "bottom" : 16,
-          "top" : 16,
-          "right" : 16,
-          "left" : 16
-        }
-      },
       "idiom" : "universal",
-      "filename" : "rect2985.png",
+      "filename" : "rect29852.png",
       "scale" : "1x"
     },
     {
